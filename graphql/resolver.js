@@ -36,7 +36,6 @@ const resolvers = {
     },
     registerUser: async (_, { username, email, password }) => {
       try {
-        console.log("hi");
         const existingUser = await UserModel.findOne({ email });
 
         if (existingUser) {
